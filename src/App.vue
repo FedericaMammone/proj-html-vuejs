@@ -1,30 +1,48 @@
 <script>
 import { store } from './store'
-import axios from 'axios';
+
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
+import AppBarbers from './components/section/AppBarbers.vue';
+import AppServices from './components/section/AppServices.vue';
+import AppProducts from './components/section/AppProducts.vue';
+import AppReviews from './components/section/AppReviews.vue';
+import AppPosts from './components/section/AppPosts.vue';
 import AppFooter from './components/AppFooter.vue';
 
 export default {
   components: {
     AppHeader,
-    AppMain,
-    AppFooter
+    AppBarbers,
+    AppServices,
+    AppProducts,
+    AppReviews,
+    AppPosts,
+    AppFooter,
 
+
+  },
+  data() {
+    return {
+      store,
+    }
   }
 }
-//   data() {
-//     return {
-//       store,
-//     }
-//   }
-// }
+
+
+
 
 </script>
 
 <template>
   <AppHeader />
-  <AppMain />
+  <main>
+    <AppBarbers />
+    <AppServices />
+    <AppProducts />
+    <AppReviews />
+    <AppPosts />
+  </main>
+
   <AppFooter />
 </template>
 
