@@ -6,12 +6,15 @@
 
 }
 
-@mixin my-display-flex-column () {
+@mixin my-display-flex-column ($type: 'both') {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     align-items: flex-start;
+
+    @if $type =='center' {
+        align-items: center
+    }
 }
 
 @mixin center($type: 'both') {

@@ -92,7 +92,7 @@ export default {
 
     .barber-shop {
         min-height: 100vh;
-        color: white;
+        color: $similBianco;
         @include my-display-flex-column;
 
         h1 {
@@ -112,12 +112,7 @@ export default {
             color: rgba($color: grey, $alpha: 0.5);
         }
 
-        button {
-            padding: 10px 20px;
-            border-color: $arancio;
-            color: $arancio;
-            background-color: rgba($color: black, $alpha: 0);
-        }
+
     }
 }
 </style>

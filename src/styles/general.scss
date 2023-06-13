@@ -2,11 +2,17 @@
 
 // bootstrap
 @import 'node_modules/bootstrap/scss/bootstrap';
-
-
+@import './partials/variables.scss';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+button {
+    padding: 10px 30px;
+    border-color: $arancio;
+    color: $arancio;
+    background-color: rgba($color: black, $alpha: 0);
 }
