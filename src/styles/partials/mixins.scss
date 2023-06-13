@@ -1,7 +1,17 @@
-@mixin my-display-flex {
-    display: -ms-flexbox;
-    display: -webkit-flex;
+@mixin my-display-flex-row () {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+@mixin my-display-flex-column () {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: flex-start;
 }
 
 @mixin center($type: 'both') {
