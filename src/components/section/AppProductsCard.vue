@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: 'AppServicesCard',
+    name: 'AppProductsCard',
     props: {
         details: Object,
 
@@ -13,8 +13,8 @@ export default {
 <template>
     <div class="card">
         <img :src="details.image" alt="image">
-        <h3>{{ details.service }}</h3>
-        <span>{{ details.description }}</span>
+        <h3>{{ details.name }}</h3>
+        <span>{{ details.price }}</span>
     </div>
 </template>
 
@@ -29,18 +29,19 @@ export default {
     width: 250px;
     border: none;
     text-align: center;
+    background-color: rgba($color: #000000, $alpha: 0);
 
-    img {
-        height: 100px;
+    pa img {
+        height: 300px;
+        background-color: rgba($color: #000000, $alpha: 0);
     }
 
     h3 {
         color: $arancio;
-        margin: 30px 0 30px 0;
     }
 
     span {
-        color: $grigio;
+        color: $arancio;
     }
 }
 </style>

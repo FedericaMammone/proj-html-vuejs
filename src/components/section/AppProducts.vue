@@ -1,6 +1,38 @@
 <script>
+import AppProductsCard from './AppProductsCard.vue'
+
 export default {
     name: 'AppProducts',
+    components: {
+        AppProductsCard
+    },
+
+    data() {
+        return {
+            cards: [
+                {
+                    "image": '../../../public/brush_dark-400x400.png',
+                    "name": 'Brush',
+                    "price": '$15.00'
+                },
+                {
+                    "image": '../../../public/scissors-400x400.png',
+                    "name": 'Scissors',
+                    "price": '$85.00'
+                },
+                {
+                    "image": '../../../public/hot_oil_dark-400x400.png',
+                    "name": 'Hot Oil',
+                    "price": '$15.00'
+                },
+                {
+                    "image": '../../../public/straight_razor_dark-400x400.png',
+                    "name": 'Straight Razor',
+                    "price": '$30.00'
+                }
+            ]
+        }
+    },
 
 }
 
@@ -15,19 +47,41 @@ export default {
 
             <!-- riga  prodotti-->
             <div class="row">
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
+                <AppProductsCard v-for="card in cards" :details="card" />
             </div>
 
-            <button></button>
+            <button>SHOP OUR PRODUCT RANGE</button>
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
-@use '../../styles/general.scss' as *;
 @use '../../styles/partials/variables.scss' as *;
 @use '../../styles/partials/mixins.scss' as *;
+
+section {
+    background-image: url(../../assets/images/avadabarbers-reviewsbackground.jpg);
+    min-height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .products {
+        @include my-display-flex-column($type: 'center');
+        height: 100%;
+
+        span {
+            color: $arancio;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: $grigio;
+        }
+
+        .row {
+            @include my-display-flex-row;
+            gap: 30px;
+        }
+    }
+}
 </style>
