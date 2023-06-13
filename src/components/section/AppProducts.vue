@@ -1,10 +1,12 @@
 <script>
 import AppProductsCard from './AppProductsCard.vue'
+import AppProductsButter from './AppProductsButter.vue'
 
 export default {
     name: 'AppProducts',
     components: {
-        AppProductsCard
+        AppProductsCard,
+        AppProductsButter
     },
 
     data() {
@@ -51,6 +53,8 @@ export default {
             </div>
 
             <button>SHOP OUR PRODUCT RANGE</button>
+
+            <AppProductsButter />
         </div>
     </section>
 </template>
@@ -61,13 +65,14 @@ export default {
 
 section {
     background-image: url(../../assets/images/avadabarbers-reviewsbackground.jpg);
-    min-height: 700px;
+    min-height: 800px;
     background-size: cover;
     background-repeat: no-repeat;
 
     .products {
         @include my-display-flex-column($type: 'center');
         height: 100%;
+        position: relative;
 
         span {
             color: $arancio;

@@ -31,7 +31,7 @@ export default {
     text-align: center;
     background-color: rgba($color: #000000, $alpha: 0);
 
-    pa img {
+    img {
         height: 300px;
         background-color: rgba($color: #000000, $alpha: 0);
     }
