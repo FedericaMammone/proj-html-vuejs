@@ -42,9 +42,7 @@ export default {
             </div>
         </div>
 
-        <div class="triangle">
-            <img src="../../../public/triangle.svg" alt="">
-        </div>
+
     </div>
 </template>
 
