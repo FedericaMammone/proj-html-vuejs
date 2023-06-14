@@ -44,7 +44,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use './../styles/general.scss' as *;
 @use './../styles/partials/variables.scss' as *;
 @use './../styles/partials/mixins.scss' as *;
 
@@ -75,13 +74,7 @@ export default {
             margin-top: 20px;
 
             .fa-solid {
-                font-size: 20px;
                 color: $primary;
-                padding: 10px;
-
-                &:hover {
-                    cursor: pointer;
-                }
             }
         }
     }

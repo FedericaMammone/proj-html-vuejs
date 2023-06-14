@@ -8,6 +8,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.fa-solid,
+.fa-brands {
+    font-size: 20px;
+    padding: 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 button {

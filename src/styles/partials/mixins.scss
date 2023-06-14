@@ -1,8 +1,11 @@
-@mixin my-display-flex-row () {
+@mixin my-display-flex-row ($type: 'both') {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
+    @if $type =='center' {
+        justify-content: center;
+    }
 
 }
 
