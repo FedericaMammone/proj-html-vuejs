@@ -1,8 +1,28 @@
 <script>
+import AppHeaderHamburger from './AppHeaderHamburger.vue'
+
 export default {
     name: 'AppHeader',
+    components: {
+        AppHeaderHamburger
+    },
+    data() {
+        return {
+            menu: false
+        }
+    },
+    methods: {
+        cambiaClasse: function () {
+            if (this.menu === true) {
+                this.menu = false;
+            } else {
+                this.menu = true;
+            }
+        }
+    }
 
 }
+
 
 </script>
 
@@ -19,11 +39,13 @@ export default {
                 <!-- carrello e hamburger menù -->
                 <div class="menu">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars" @click="cambiaClasse">
+                        <AppHeaderHamburger :class="this.menu === true ? 'active' : ''" />
+                    </i>
                 </div>
             </nav>
 
-            <div class="jumbo">
+            <div class=" jumbo">
                 <!-- sezione simil-jumbo -->
                 <div class="barber-shop">
                     <h1>Barber Shop</h1>
@@ -53,6 +75,7 @@ export default {
     background-repeat: no-repeat;
     height: 800px;
     max-width: 100%;
+    position: relative;
 }
 
 .distanziatore {
@@ -75,6 +98,10 @@ export default {
 
             .fa-solid {
                 color: $primary;
+            }
+
+            .active {
+                display: block;
             }
         }
     }

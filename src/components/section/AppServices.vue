@@ -12,7 +12,7 @@ export default {
         return {
             cards: [
                 {
-                    "image": '../../../public/avadabarbers-trimcut-icon-before.png',
+                    image: '../../../public/avadabarbers-trimcut-icon-before.png',
                     "service": 'Trim & Cut',
                     "description": 'Avada Barbers are experts in the lickety split trim and hair cut. Quickbut careful and ridiculously good looking.'
                 },

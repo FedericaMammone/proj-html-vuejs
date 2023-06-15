@@ -4,7 +4,6 @@ export default {
     name: 'AppServicesCard',
     props: {
         details: Object,
-
     }
 }
 
